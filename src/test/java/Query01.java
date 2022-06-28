@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class QueryFirst {
+public class Query01 {
 
         public static void main(String[] args) throws ClassNotFoundException, SQLException {
             //Driver yukle
@@ -16,15 +16,13 @@ public class QueryFirst {
                 //index kullanarak
                 System.out.println(data.getInt(1)+data.getString(2)
                         +data.getString(3)+data.getString(4));
-                //sutun kullanarak
+                //sutun adi kullanarak
                 System.out.println(data.getInt("okul_no")+data.getString("ogrenci_ismi")
                         +data.getString("sinif")+data.getString("cinsiyet"));
             }
             //kapatma
-            //con.close();
-            //st.close();
-            //data.close();
+            con.close();
+            st.close();
+            data.close();
         }
     }
-
-

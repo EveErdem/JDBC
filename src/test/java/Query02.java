@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class QuerySecond {
+public class Query02 {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         //Driver yukle
         Class.forName("com.mysql.jdbc.Driver");
@@ -20,6 +20,10 @@ public class QuerySecond {
             System.out.println(data2.getInt(1)+data2.getString(2)
                     +data2.getString(3)+data2.getString(4));
         }
+        con.close();
+        st.close();
+        data.close();
+        data2.close();
     }
 
 }
